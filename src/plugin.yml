@@ -1,0 +1,8 @@
+name: CancellationDetector
+main: intcraft.canceldetect.ExampleMod
+version: 1.0.0
+author: aadnk, monsquaz
+website: https://github.com/MonsquazTFC/CancellationDetector
+description: >
+    Detects which plugin cancelled a given event.
+softdepend: []

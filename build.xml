@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Towny" default="dist" basedir=".">
+	<property file="build.properties"/>
+	
+	<target name="clean">
+		<delete dir="${build}" deleteonexit="true"/>
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${build}"/>
+	</target>
+
+	<target name="build" depends="init">
+		<javac srcdir="${src}" destdir="${build}" target="1.6" source="1.6" includeantruntime="false">
+			<classpath>
+				<pathelement location="./lib/spigot-1.8.8.jar" />
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="dist" depends="build">
+		<mkdir dir="${dist}"/>
+		<jar destfile="${dist}/${jarname}-${stage}_${version}.jar">
+			<fileset dir="${build}"/>
+			<fileset dir="${src}" includes="plugin.yml"/>
+		</jar>
+	</target>
+</project>
