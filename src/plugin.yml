@@ -1,8 +1,8 @@
 name: CancellationDetector
-main: intcraft.canceldetect.ExampleMod
+main: intcraft.canceldetect.PvPCancelDetector
 version: 1.0.0
 author: aadnk, monsquaz
 website: https://github.com/MonsquazTFC/CancellationDetector
 description: >
-    Detects which plugin cancelled a given event.
+    Detects which plugin cancelled a pvp damage event.
 softdepend: []
